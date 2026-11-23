@@ -1,0 +1,23 @@
+{
+  "checks": [
+    {
+      "id": "REQ-CSCA-001",
+      "description": "An assessment has a calculated risk tier",
+      "path": "tier_result.final_tier",
+      "operator": "not_empty"
+    },
+    {
+      "id": "REQ-CSCA-002",
+      "description": "The selected control scope is persisted as a list",
+      "path": "controls",
+      "operator": "is_type",
+      "expected": "list"
+    },
+    {
+      "id": "REQ-CSCA-003",
+      "description": "Intake includes the assessment type",
+      "path": "intake.assessment_type",
+      "operator": "not_empty"
+    }
+  ]
+}

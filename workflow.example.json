@@ -1,0 +1,27 @@
+{
+  "steps": [
+    {
+      "id": "WF-TRIAGE-001",
+      "description": "Complete triage and move a newly simulated case to ready-to-work",
+      "method": "PATCH",
+      "path": "/cases/{ritm}",
+      "body": {
+        "service_team": "Cloud",
+        "status": "ready_to_work"
+      },
+      "expected_status": 200,
+      "assertions": [
+        {
+          "path": "status",
+          "operator": "equals",
+          "expected": "ready_to_work"
+        },
+        {
+          "path": "service_team",
+          "operator": "equals",
+          "expected": "Cloud"
+        }
+      ]
+    }
+  ]
+}
